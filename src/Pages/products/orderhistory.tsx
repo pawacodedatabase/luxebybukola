@@ -40,7 +40,7 @@ const OrderHistory: React.FC = () => {
         <p className=' max-w-[300px]  m-auto '>Our team will review your Transaction and get back with you shortly </p>
       </div>
 
-      <div className="mt-6 flex justify-center">
+      {/* <div className="mt-6 flex justify-center">
         <a
           href={whatsappLink}
           target="_blank"
@@ -50,7 +50,7 @@ const OrderHistory: React.FC = () => {
           <FaWhatsapp className="mr-2" />
          Send Payment Receipt
         </a>
-      </div>
+      </div> */}
 
       <button
         onClick={() => window.history.back()}

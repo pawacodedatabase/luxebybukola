@@ -3,7 +3,8 @@ export interface Product {
     name: string;
     category: string;
     subCategories: string[];
-    price: number;
+    price: number | undefined;
+
     originalPrice?: number; // For sale price comparison
     isOnSale?: boolean;
     description: string;

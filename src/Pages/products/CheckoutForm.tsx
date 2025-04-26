@@ -55,7 +55,7 @@ const CheckoutForm: React.FC = () => {
     } else if (paymentMethod === 'bankTransfer') {
       setFormData((prevState) => ({
         ...prevState,
-        paymentDetails: `Palmpay 9132214390, Damilola Sobowale`, // Example Bank details
+        paymentDetails: `Opay, BUKOLA`, // Example Bank details
       }));
     } else {
       setFormData((prevState) => ({

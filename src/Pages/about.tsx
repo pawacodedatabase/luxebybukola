@@ -5,7 +5,7 @@ import dami3 from "../assets/dami_3.jpg"
 import dami4 from "../assets/dami_4.jpg"
 import {  FaFacebookSquare, FaTiktok, FaTwitterSquare } from 'react-icons/fa';
 const ceo = {
-  name: 'Damilola Sobowale',
+  name: 'BUKOLA',
   role: 'CEO & Founder',
   images: [
     dami4, 
