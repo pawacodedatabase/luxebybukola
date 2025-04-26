@@ -19,7 +19,7 @@ export default function AdminPage() {
     name: "",
     category: "",
     subCategories: [],
-    price: undefined,
+    price: 1,
     originalPrice: undefined,
     isOnSale: false,
     description: "",
