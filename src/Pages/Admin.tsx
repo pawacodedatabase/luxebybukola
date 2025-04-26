@@ -125,13 +125,17 @@ export default function AdminPage() {
 
       {/* PRODUCT FORM */}
       <form onSubmit={handleSubmit} className="space-y-4 border p-4 rounded-lg bg-white shadow mb-10">
-        <input
+       
+       <label htmlFor="">Product Name</label> <input
           type="text"
           placeholder="Name"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="border p-2 w-full rounded"
+          className="border p-2 w-full rounded "
         />
+        <br /> <br />
+
+        <label htmlFor="">Product Category (Shoe, Bag...)</label>
         <input
           type="text"
           placeholder="Category"
@@ -139,6 +143,10 @@ export default function AdminPage() {
           onChange={(e) => setForm({ ...form, category: e.target.value })}
           className="border p-2 w-full rounded"
         />
+
+        <br /><br />
+
+<label htmlFor="">Sub Category (Optional) </label>
         <input
           type="text"
           placeholder="Subcategories (comma separated)"
@@ -148,12 +156,16 @@ export default function AdminPage() {
           }
           className="border p-2 w-full rounded"
         />
+
+<label htmlFor="">Product Description</label>
         <textarea
           placeholder="Description"
           value={form.description}
           onChange={(e) => setForm({ ...form, description: e.target.value })}
           className="border p-2 w-full rounded"
         />
+
+<label htmlFor="">Product Price</label>
         <div className="flex gap-2">
           <input
             type="number"
@@ -162,9 +174,11 @@ export default function AdminPage() {
             onChange={(e) => setForm({ ...form, price: +e.target.value })}
             className="border p-2 rounded w-1/2"
           />
+
+
           <input
             type="number"
-            placeholder="Original Price"
+            placeholder="Onsale Price"
             value={form.originalPrice ?? ""}
             onChange={(e) => setForm({ ...form, originalPrice: +e.target.value })}
             className="border p-2 rounded w-1/2"
@@ -245,9 +259,9 @@ export default function AdminPage() {
               <div className="flex-1">
                 <h2 className="text-lg font-semibold">{product.name}</h2>
                 <p className="text-sm text-gray-500">{product.category}</p>
-                <p className="font-bold text-blue-600">${product.price}</p>
+                <p className="font-bold text-blue-600">N{product.price}</p>
                 {product.originalPrice && (
-                  <p className="text-sm line-through text-gray-400">${product.originalPrice}</p>
+                  <p className="text-sm line-through text-gray-400">N{product.originalPrice}</p>
                 )}
               </div>
             </div>
