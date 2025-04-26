@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
+// import { FaWhatsapp } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const OrderHistory: React.FC = () => {
@@ -40,17 +40,16 @@ const OrderHistory: React.FC = () => {
         <p className=' max-w-[300px]  m-auto '>Our team will review your Transaction and get back with you shortly </p>
       </div>
 
-      {/* <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex justify-center">
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg flex items-center hover:bg-green-600"
         >
-          <FaWhatsapp className="mr-2" />
-         Send Payment Receipt
+
         </a>
-      </div> */}
+      </div>
 
       <button
         onClick={() => window.history.back()}
