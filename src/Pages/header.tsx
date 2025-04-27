@@ -80,8 +80,8 @@ const Header: React.FC = () => {
         {/* Logo in the center */}
         <Link to="/">
         <div className="flex-grow text-center md:text-left">
-          <img src={logo} alt="Logo" width={60} className=" mx-auto md:mx-0" />
-          <h1 className=" text-yellow-300 ">LUXE BY BUKOLA</h1>
+          <img src={logo} alt="Logo" width={120} className=" mx-auto md:mx-0" />
+          {/* <h1 className=" text-yellow-300 ">LUXE BY BUKOLA</h1> */}
         </div>
         </Link>
         

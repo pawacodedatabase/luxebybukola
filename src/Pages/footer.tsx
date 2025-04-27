@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://instagram.com/shopwith"
+                href="https://instagram.com/luxebybukolaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-yellow-200 hover:bg-yellow-300 p-3 rounded-full text-black text-lg transition"
@@ -87,17 +87,16 @@ const Footer: React.FC = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://wa.me/+2349132214390 
-"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-yellow-200 hover:bg-yellow-300 p-3 rounded-full text-black text-lg transition"
-              >
-                <FaWhatsapp />
-              </a>
+  href="https://wa.me/+2348104682609" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-yellow-200 hover:bg-yellow-300 p-3 rounded-full text-black text-lg transition">
+  <FaWhatsapp />
+</a>
+
 
               <a
-                href="tel:+2349132214390"
+                href="tel:+2348104682609"
                 className="bg-yellow-200 hover:bg-yellow-300 p-3 rounded-full text-black text-lg transition"
               >
                 <FaPhone />
