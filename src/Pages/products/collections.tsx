@@ -48,12 +48,12 @@ const Collections: React.FC = () => {
             <div className="p-2">
               <h3 className="text-sm font-semibold truncate">{product.name}</h3>
               <p className="text-sm font-semibold text-red-500 mt-1">
-                ₦{product.price.toLocaleString()}
+                {/* ₦{product.price.toLocaleString()}
                 {product.originalPrice && (
                   <span className="text-gray-500 text-xs line-through ml-2">
                     ₦{product.originalPrice.toLocaleString()}
                   </span>
-                )}
+                )} */}
               </p>
             </div>
           </div>
