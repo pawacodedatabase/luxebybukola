@@ -135,16 +135,18 @@ export default function AdminPage() {
         />
         <br /> <br />
 
-        <label htmlFor="">Product Category (Shoe, Bag...)</label>
-        <input
-          type="text"
-          placeholder="Category"
-          value={form.category}
-          onChange={(e) => setForm({ ...form, category: e.target.value })}
-          className="border p-2 w-full rounded"
-        />
+        <label htmlFor="">Product Category</label>
+<select
+  value={form.category}
+  onChange={(e) => setForm({ ...form, category: e.target.value })}
+  className="border p-2 w-full rounded"
+>
+  <option value="">-- Select Category --</option>
+  <option value="Bag">Bag</option>
+  <option value="Shoe">Shoe</option>
+  <option value="Jewelry">Jewelry</option>
+</select>
 
-        <br /><br />
 
 <label htmlFor="">Sub Category (Optional) </label>
         <input

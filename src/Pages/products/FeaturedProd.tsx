@@ -64,7 +64,7 @@ const FeaturedProduct: React.FC = () => {
         {randomProducts.map((product: Product) => (
           <div
             key={product.id}
-            className="bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+            className="bg-black border border-gray-200 shadow-md rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
           >
             {/* Product Image */}
             <Link to={`/product/${product.id}`}>
@@ -77,8 +77,8 @@ const FeaturedProduct: React.FC = () => {
 
             {/* Product Details */}
             <div className="p-2">
-              <h3 className="text-sm font-semibold truncate">{product.name}</h3>
-              <p className="text-sm font-semibold text-red-500 mt-1">
+              <h3 className="text-sm font-semibold text-[#ccc] truncate">{product.name}</h3>
+              <p className="text-sm font-semibold text-yellow-300 mt-1">
                 ₦{product.price.toLocaleString()}
                 {product.originalPrice && (
                   <span className="text-gray-500 text-xs line-through ml-2">

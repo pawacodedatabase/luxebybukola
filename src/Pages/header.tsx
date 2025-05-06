@@ -123,10 +123,10 @@ const Header: React.FC = () => {
             </Link>
             <hr className="border-2 border-gray-800 w-[30%]"/>
 
-            <Link to="/collection" className="relative text-[#fff] hover:text-yellow-300 transition-colors duration-300 before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-[#2E4156] before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0" onClick={() => setIsMenuOpen(false)}>
+            {/* <Link to="/collection" className="relative text-[#fff] hover:text-yellow-300 transition-colors duration-300 before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-[#2E4156] before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:before:left-0" onClick={() => setIsMenuOpen(false)}>
               Collection
-            </Link>
-            <hr className="border-2 border-gray-800 w-[20%]"/>
+            </Link> */}
+            {/* <hr className="border-2 border-gray-800 w-[20%]"/> */}
           </nav>
         </div>
       )}

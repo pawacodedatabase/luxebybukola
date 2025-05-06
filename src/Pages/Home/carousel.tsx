@@ -1,116 +1,86 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-
-
-import banner1 from '../../assets/dami_4.jpg'
-import banner2 from '../../assets/dami_2.jpg'
-import banner3 from '../../assets/dami_3.jpg'
-import banner4 from '../../assets/dami_1.jpg'
 import { Link } from "react-router-dom";
+
+import banner1 from '../../assets/dami_4.jpg';
+import banner2 from '../../assets/br2.jpg';
+import banner3 from '../../assets/dami_1.jpg';
+import banner4 from '../../assets/hon.jpg';
 
 const slides = [
   {
     id: 1,
-    title: "Elevate Your Style with Riss",
-    subtitle: "Discover timeless clothing and accessories crafted for every moment. ",
-    buttonText: "Shop Now",
+    title: "Step into Dazzling Elegance",
+    subtitle: "Discover timeless footwear, luxurious shoes for all occasions, sizes and styles.",
+    buttonText: "SHOP NOW",
     image: banner1,
   },
   {
     id: 2,
-    title: "Elegant Accessories for You",
-    subtitle: "Discover timeless clothing and accessories crafted for every moment. ",
-    buttonText: "Discover More",
+    title: "Chic & Timeless Bags from LuxebyBukola",
+    subtitle: "Complete your look with our exclusive collection of premium bags.",
+    buttonText: "SHOP NOW",
     image: banner2,
   },
   {
     id: 3,
-    title: "Luxury Meets Functionality",
-    subtitle: "Transform your look with premium Qualities.",
-    buttonText: "Shop Now",
+    title: "Jewelry that Speaks Luxury",
+    subtitle: "Add a touch of elegance with LuxebyBukola's stunning jewelry pieces.",
+    buttonText: "SHOP NOW",
     image: banner3,
   },
   {
     id: 4,
-    title: "Luxury Meets Functionality",
-    subtitle: "Discover timeless clothing and accessories crafted for every moment.",
-    buttonText: "Explore Collection",
-    image:banner4,
+    title: "Where Fashion Meets Function",
+    subtitle: "LuxebyBukola brings you the perfect blend of style and comfort with our shoes and accessories.",
+    buttonText: "SHOP NOW",
+    image: banner4,
   },
 ];
 
 const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-rotate the carousel every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
 
- 
-
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Carousel Slides */}
-      <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <motion.div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: index === currentIndex ? 1 : 0 }}
-            transition={{ duration: 1 }}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute inset-0 bg-[#000] opacity-80"></div>
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentIndex ? "opacity-100 z-10" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url(${slide.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Left Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
 
-            {/* Text Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-4">
-              <motion.h1
-                className="text-3xl md:text-6xl font-thin mb-4 font-riss"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-              >
+          {/* Text Content */}
+          <div className="relative z-20 flex items-center h-full px-8 md:px-24">
+            <div className="max-w-xl text-black space-y-6">
+              <h1 className="text-3xl md:text-6xl font-serif font-semibold leading-tight">
                 {slide.title}
-              </motion.h1>
-              <motion.p
-                className="text-sm font-sans  md:text-sm mb-8"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
+              </h1>
+              <p className="text-base md:text-lg font-light">{slide.subtitle}</p>
+              <Link
+                to="/shop"
+                className="inline-block bg-black text-yellow-200  text-sm font-semibold px-6 py-3 mt-4 rounded hover:border-2 hover:border-black hover:text-black hover:bg-white transition"
               >
-                {slide.subtitle}
-              </motion.p>
-              <motion.div
-  className="inline-block"
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1, delay: 0.7 }}
->
-  <Link
-    to="/shop" // Replace "/shop" with the desired route
-    className="bg-transparent border-2 border-white px-6 py-3 rounded-md hover:bg-white hover:text-[#1a2d42] transition-all duration-300"
-  >
-    {slide.buttonText}
-  </Link>
-</motion.div>
+                {slide.buttonText}
+              </Link>
             </div>
-          </motion.div>
-        ))}
-      </div>
-
-     
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
