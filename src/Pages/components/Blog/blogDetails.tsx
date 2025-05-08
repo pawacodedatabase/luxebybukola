@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import img from "../../../assets/logo.jpg";
+import img from "./1.png";
 import fav from "../../../assets/logo.jpg";
 import FeaturedBlog from "./featuredBlog";
 
@@ -83,7 +83,7 @@ const BlogDetail: React.FC = () => {
           alt={blog.title}
           className="w-full h-[600px] rounded-lg"
         />
-        <div className="text-gray-700 mt-4 space-y-4">
+        <div className="text-gray-700 mt-4 space-y-4 p-9">
           {blog.content.split("\n").map((paragraph: string, index: number) => (
             <p key={index} className="leading-relaxed">
               {paragraph}
