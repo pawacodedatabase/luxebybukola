@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaInstagram, FaEnvelope, FaWhatsapp, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -113,38 +114,47 @@ const Footer: React.FC = () => {
           <p className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()} LBB. All rights reserved.
           </p>
-          <ul className="flex space-x-6 mt-4 md:mt-0">
+          <ul className="flex space-x-6 mt-4 md:mt-0 ">
             <li>
-              <a
-                href="/privacy-policy"
-                className="text-gray-300 hover:text-yellow-300 text-sm transition"
-              >
-                Privacy Policy
-              </a>
+            
+
+                <Link to={'/legal'}  className="text-gray-400  hover:text-yellow-300 text-sm transition"
+             > Privacy Policy
+                </Link>
+               
             </li>
             <li>
-              <a
-                href="/terms"
-                className="text-gray-300 hover:text-yellow-300 text-sm transition"
-              >
-                Terms of Service
-              </a>
+            
+
+                <Link to={'/legal'}  className="text-gray-400 hover:text-yellow-300 text-sm transition"
+             > Terms of Service
+                </Link>
+               
             </li>
             <li>
-              <a
-                href="/contact"
-                className="text-gray-300 hover:text-yellow-300 text-sm transition"
-              >
-                Contact Us
-              </a>
+            
+
+                <Link to={'/legal'}  className="text-gray-400 hover:text-yellow-300 text-sm transition"
+             > Refund Policy
+                </Link>
+               
             </li>
+            <li>
+            
+
+                <Link to={'/blog'}  className="text-gray-400 hover:text-yellow-300 text-sm transition"
+             > Blog
+                </Link>
+               
+            </li>
+          
           </ul>
         </div>
 
         {/* //advert */}
         <div className="text-sm text-center mt-8 ">
           <p className="text-gray-400">
-            website created by |{" "}
+            Website created by |{" "}
             <a
               href="https://wa.me/2348053208997"
               target="_blank"
