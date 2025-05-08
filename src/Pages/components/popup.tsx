@@ -4,30 +4,10 @@ import logo from "../../assets/logo.jpg";
 import { Link } from "react-router-dom";
 
 export default function BusinessPopup() {
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    const seenData = localStorage.getItem("hasSeenBusinessPopup");
-
-    if (seenData) {
-      const { timestamp } = JSON.parse(seenData);
-      const now = new Date().getTime();
-      const twoHours = 30 * 60 * 1000;
-
-      // If it's been more than 2 hours, remove the item and show the popup again
-      if (now - timestamp > twoHours) {
-        localStorage.removeItem("hasSeenBusinessPopup");
-        setShowPopup(true);
-      }
-    } else {
-      setShowPopup(true);
-    }
-  }, []);
+  const [showPopup, setShowPopup] = useState(true); // Show by default
 
   const handleClose = () => {
-    const timestamp = new Date().getTime();
-    localStorage.setItem("hasSeenBusinessPopup", JSON.stringify({ timestamp }));
-    setShowPopup(false);
+    setShowPopup(false); // Just close without storing anything
   };
 
   if (!showPopup) return null;
@@ -47,7 +27,9 @@ export default function BusinessPopup() {
         <h2 className="font-semibold text-xl text-yellow-300 mb-2">Explore & Learn</h2>
 
         <p className="text-sm text-gray-300 mb-5">
-          Want to style better or shop smarter? Visit our <span className="text-white font-medium">Blog</span> for fashion tips, or check our <span className="text-white font-medium">Size Guide</span> to find your perfect fit!
+          Want to style better or shop smarter? Visit our{" "}
+          <span className="text-white font-medium">Blog</span> for fashion tips, or check our{" "}
+          <span className="text-white font-medium">Size Guide</span> to find your perfect fit!
         </p>
 
         <div className="flex flex-col gap-3">
