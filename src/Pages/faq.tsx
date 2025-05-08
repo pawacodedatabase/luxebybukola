@@ -4,9 +4,9 @@ import ReviewComponent from './components/review';
 
 const faqs = [
   {
-    question: "What makes LuxeByBukola unique?",
+    question: "What makes LBB unique?",
     answer:
-      "LuxeByBukola stands out for its blend of elegance, quality, and affordability. Each bag and pair of shoes is carefully designed to empower women with style and confidence.",
+      "LBB stands out for its blend of elegance, quality, and affordability. Each bag and pair of shoes is carefully designed to empower women with style and confidence.",
   },
   {
     question: "How do you ensure the quality of your products?",
@@ -14,7 +14,7 @@ const faqs = [
       "We source only high-quality materials and work with skilled artisans to create stylish, durable bags and shoes. Every item is thoroughly inspected to meet our luxury standards.",
   },
   {
-    question: "Is LuxeByBukola committed to sustainability?",
+    question: "Is LBB committed to sustainability?",
     answer:
       "Yes, we are. We take conscious steps towards sustainability by using ethically sourced materials and minimizing waste in our production process.",
   },
@@ -24,9 +24,9 @@ const faqs = [
       "We offer a 30-day return policy for unused items in their original packaging. If you're not satisfied, we're here to help make it right.",
   },
   {
-    question: "Why should I trust LuxeByBukola?",
+    question: "Why should I trust LBB?",
     answer:
-      "LuxeByBukola has earned the trust of stylish women nationwide through our dedication to quality, customer service, and timeless designs.",
+      "LBB has earned the trust of stylish women nationwide through our dedication to quality, customer service, and timeless designs.",
   },
   {
     question: "Do you offer custom or limited edition designs?",
@@ -58,9 +58,9 @@ const FAQAccordion: React.FC = () => {
     <div className="p-8 bg-gray-100 min-h-screen">
       {/* Heading */}
       <div className="text-center mb-12">
-  <h1 className="text-4xl font-bold text-gray-800 font-luxe">Why Choose LuxeByBukola?</h1>
+  <h1 className="text-4xl font-bold text-gray-800 font-luxe">Why Choose LBB?</h1>
   <p className="mt-4 text-gray-600">
-    Explore how LuxeByBukola blends quality, elegance, and confidence into every bag and shoe we craft for the modern woman.
+    Explore how LBB blends quality, elegance, and confidence into every bag and shoe we craft for the modern woman.
   </p>
 </div>
 

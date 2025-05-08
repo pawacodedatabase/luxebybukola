@@ -44,11 +44,11 @@ const Footer: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full p-3 rounded-full bg-gray-800 text-sm text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full p-3 rounded-full bg-gray-800 text-sm text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300"
               />
               <button
                 type="submit"
-                className="absolute top-1/2 transform -translate-y-1/2 right-3 px-6 py-2 rounded-full bg-yellow-300 hover:bg-red-500 text-black text-sm font-bold transition"
+                className="absolute top-1/2 transform -translate-y-1/2 right-3 px-6 py-2 rounded-full bg-yellow-300 hover:bg-black hover:text-yellow-300  text-black text-sm font-bold transition"
               >
                 Subscribe
               </button>

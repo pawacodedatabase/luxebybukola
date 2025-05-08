@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Product } from "../Pages/products/product";
+import AdminBlog from "./components/Blog/adminBlog";
 
 const BIN_ID = "680c93278a456b796691bca7";
 const API_KEY = "$2a$10$qrNF.b6EVU4HN2N8Dvegaez/mp2L7ZO9EjET5ujsIiWNSfuOyB.mu";
@@ -26,6 +27,7 @@ export default function AdminPage() {
     images: [],
     sizes: [],
     colors: [],
+   
   });
   const [uploading, setUploading] = useState(false);
 
@@ -81,9 +83,16 @@ export default function AdminPage() {
       colors: [],
     });
   };
+  const handleArrayInput = (value: string) => {
+    console.log("Input Value:", value); // Check the input value
+    return value.split(",").map((v) => v.trim()).filter((v) => v);
+  };
 
-  const handleArrayInput = (value: string) =>
-    value.split(",").map((v) => v.trim()).filter((v) => v);
+
+
+
+ 
+
 
   const removeImage = (index: number) => {
     const updatedImages = [...form.images];
@@ -120,6 +129,8 @@ export default function AdminPage() {
   }, []);
 
   return (
+    <>
+    
     <div className="p-6 max-w-5xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Admin Panel</h1>
 
@@ -201,6 +212,10 @@ export default function AdminPage() {
           onChange={(e) => setForm({ ...form, sizes: handleArrayInput(e.target.value) })}
           className="border p-2 w-full rounded"
         />
+
+
+
+
         <input
           type="text"
           placeholder="Colors (comma separated)"
@@ -285,5 +300,8 @@ export default function AdminPage() {
         ))}
       </div>
     </div>
+    
+    <AdminBlog/>
+    </>
   );
 }

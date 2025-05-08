@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaShoppingBag, FaHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import axios from "axios";
+import BusinessPopup from "../components/popup";
 
 const BIN_ID = "680c93278a456b796691bca7"; // Your bin ID
 const API_KEY = "$2a$10$qrNF.b6EVU4HN2N8Dvegaez/mp2L7ZO9EjET5ujsIiWNSfuOyB.mu";
@@ -140,9 +141,11 @@ export default function ProductPage() {
   const wishlistCount = wishlist.length;
 
   return (
-    <div className="relative">
+    <>
+   <BusinessPopup/>
+    <div className="relative"> <h1 className="text-2xl font-thin text-center p-4">OUR COLLECTIONS</h1>
       <div className="flex flex-wrap justify-center gap-5 w-full p-6">
-        <h1 className="text-2xl font-thin">OUR COLLECTIONS</h1>
+       
         {loading ? (
           Array.from({ length: 6 }).map((_, idx) => (
             <div
@@ -284,6 +287,6 @@ export default function ProductPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </div> </>
   );
 }

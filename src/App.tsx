@@ -17,6 +17,9 @@ import FAQAccordion from './Pages/faq';
 import WhatsAppIcon from './Pages/components/whatsapp';
 import AdminPage from './Pages/Admin';
 import ProductPage from './Pages/newProducts/products';
+import Blog from './Pages/components/Blog/blog';
+import BlogDetail from './Pages/components/Blog/blogDetails';
+import LegSizeGuide from './Pages/components/guide';
 
 
 // Importing pages
@@ -44,6 +47,9 @@ const App: React.FC = () => {
         <Route path="/admin" element={<AdminPage/>} />
         <Route path="/products" element={<ProductPage/>} />
         <Route path="/collection" element={<Collections/>} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/guide" element={<LegSizeGuide/>} />
+        <Route path="/blog/:id" element={<BlogDetail/>} />
         <Route path="/product/:id" element={<ProductDetail />} />
          </Routes>
          <Footer/>

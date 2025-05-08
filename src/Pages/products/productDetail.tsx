@@ -51,6 +51,22 @@ const ProductDetail: React.FC = () => {
     }
   };
 
+  const getTextColor = (bgColor: string): string => {
+    // Remove the "#" if present
+    const hexColor = bgColor.replace("#", "");
+  
+    // Convert hex to RGB
+    const r = parseInt(hexColor.substring(0, 2), 16);
+    const g = parseInt(hexColor.substring(2, 4), 16);
+    const b = parseInt(hexColor.substring(4, 6), 16);
+  
+    // Calculate brightness using the luminance formula
+    const brightness = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  
+    // Return white or black text based on brightness
+    return brightness < 128 ? "white" : "black";
+  };
+
   useEffect(() => {
     fetchProduct();
   }, [id]);
@@ -212,6 +228,63 @@ const ProductDetail: React.FC = () => {
                     </p>
                   )}
                 </div>
+
+                <div>
+                <div>
+                <div className='mt-5'>
+  <p>
+    Available Size{product.sizes?.length === 1 ? "" : "s"}:
+  </p>{" "}
+  {product.sizes?.map((size: string, index: number) => (
+    <span key={index}>
+    <p className="p-2 bg-gray-300 inline-block rounded text-sm mr-2">{size}</p>
+
+      {index < product.sizes.length - 1 ? ", " : ""}
+    </span>
+  ))}
+</div>
+
+<div>
+  <p>
+    Available Color{product.colors?.length === 1 ? "" : "s"}:
+  </p>{" "}
+  {product.colors?.map((color: string, index: number) => (
+    <p
+      key={index}
+      className="p-2 inline-block rounded text-sm mr-2"
+      style={{
+        backgroundColor: color,
+        color: getTextColor(color), // Dynamic text color
+      }}
+    >
+      {color.charAt(0).toUpperCase() + color.slice(1)}
+    </p>
+  ))}
+</div>
+
+{/* <div>
+  <p>
+    Available Color{product.colors?.length === 1 ? "" : "s"}:
+  </p>{" "}
+  {product.colors?.map((color: string, index: number) => (
+    <span key={index}>
+       <p
+  key={index}
+  className="p-2 inline-block rounded text-sm mr-2"
+  style={{ backgroundColor: color }}
+>
+  {color.charAt(0).toUpperCase() + color.slice(1)}
+</p>
+
+      {index < product.colors.length - 1 ? ", " : ""}
+    </span>
+  ))}
+</div> */}
+
+</div>
+
+</div>
+
 
                 <div className="mt-6 flex items-center">
                   {!isProductInCart ? (
