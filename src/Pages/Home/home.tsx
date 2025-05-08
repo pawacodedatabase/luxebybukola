@@ -1,6 +1,7 @@
 
 // import CollectionComponent from "../components/CollectionComponent";
 // import DualImageComponent from "../components/dualimage";
+import FeaturedBlog from "../components/Blog/featuredBlog";
 import CategorySelector from "../components/categoryselector";
 import OccasionEdit from "../components/occasionedit";
 
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
      <CategorySelector/>
     <FeaturedProduct/>
     <OccasionEdit/>
+    <FeaturedBlog/>
     {/* <BusinessPopup/> */}
   
   

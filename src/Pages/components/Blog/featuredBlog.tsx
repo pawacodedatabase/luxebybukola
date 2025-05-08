@@ -44,7 +44,7 @@ const FeaturedBlog: React.FC = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-semibold text-center mb-4 text-red-600">
+      <h2 className="text-2xl font-semibold text-center mb-4 ">
         Featured Blogs
       </h2>
 
@@ -90,7 +90,13 @@ const FeaturedBlog: React.FC = () => {
              
             </div>
           ))}
-        </div>
+          
+          <Link to={'/blog'} className="m-auto">  <button className="bg-black text-yellow-300 px-3 py-2 w-[150px] m-auto rounded hover:border-2 hover:border-black hover:bg-white hover:text-black">View all blogs</button>
+  
+          </Link>
+              </div>
+
+        
       )}
     </div>
   );
