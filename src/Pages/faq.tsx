@@ -4,31 +4,47 @@ import ReviewComponent from './components/review';
 
 const faqs = [
   {
-    question: "What makes Riss Luxury unique?",
+    question: "What makes LuxeByBukola unique?",
     answer:
-      "Riss Luxury combines premium craftsmanship, cutting-edge designs, and sustainable practices to create luxurious products that stand the test of time.",
+      "LuxeByBukola stands out for its blend of elegance, quality, and affordability. Each bag and pair of shoes is carefully designed to empower women with style and confidence.",
   },
   {
     question: "How do you ensure the quality of your products?",
     answer:
-      "Our products are meticulously crafted using the finest materials, with every piece undergoing a rigorous quality check process to ensure unmatched durability and elegance.",
+      "We source only high-quality materials and work with skilled artisans to create stylish, durable bags and shoes. Every item is thoroughly inspected to meet our luxury standards.",
   },
   {
-    question: "Is Riss Luxury committed to sustainability?",
+    question: "Is LuxeByBukola committed to sustainability?",
     answer:
-      "Absolutely! We prioritize sustainability by using eco-friendly materials and ethical practices throughout our production process.",
+      "Yes, we are. We take conscious steps towards sustainability by using ethically sourced materials and minimizing waste in our production process.",
   },
   {
     question: "What is your return policy?",
     answer:
-      "We offer a 30-day return policy for unworn and undamaged items with original packaging. Customer satisfaction is our priority.",
+      "We offer a 30-day return policy for unused items in their original packaging. If you're not satisfied, we're here to help make it right.",
   },
   {
-    question: "Why should I trust Riss Luxury?",
+    question: "Why should I trust LuxeByBukola?",
     answer:
-      "With thousands of satisfied customers and years of industry expertise, Riss Luxury has built a reputation for delivering timeless, reliable, and exceptional luxury products.",
+      "LuxeByBukola has earned the trust of stylish women nationwide through our dedication to quality, customer service, and timeless designs.",
+  },
+  {
+    question: "Do you offer custom or limited edition designs?",
+    answer:
+      "Yes, we occasionally release exclusive collections and limited-edition pieces. Be sure to follow us on social media or subscribe to our newsletter for updates.",
+  },
+  {
+    question: "How do I know my shoe size will fit?",
+    answer:
+      "We provide a detailed size guide on each product page. If you’re unsure, our support team is happy to help you choose the perfect fit.",
+  },
+  {
+    question: "Can I place a bulk or wholesale order?",
+    answer:
+      "Absolutely! We welcome bulk and wholesale inquiries. Please contact us directly for tailored pricing and order details.",
   },
 ];
+
 
 const FAQAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -42,11 +58,12 @@ const FAQAccordion: React.FC = () => {
     <div className="p-8 bg-gray-100 min-h-screen">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 font-riss">Why Trust Riss Luxury?</h1>
-        <p className="mt-4 text-gray-600">
-          Discover how Riss Luxury guarantees exceptional quality, timeless style, and unmatched value.
-        </p>
-      </div>
+  <h1 className="text-4xl font-bold text-gray-800 font-luxe">Why Choose LuxeByBukola?</h1>
+  <p className="mt-4 text-gray-600">
+    Explore how LuxeByBukola blends quality, elegance, and confidence into every bag and shoe we craft for the modern woman.
+  </p>
+</div>
+
 
       {/* FAQ Accordion */}
       <div className="max-w-4xl mx-auto">
