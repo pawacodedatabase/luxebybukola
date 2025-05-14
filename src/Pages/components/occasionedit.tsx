@@ -8,12 +8,12 @@ const OccasionEdit: React.FC = () => {
         {/* Text Section */}
         <div className="w-full md:w-1/2 p-8 md:p-16 text-center md:text-left space-y-4">
           <h2 className="text-2xl md:text-3xl font-serif text-black">
-            The Occasion Edit
+            LuxeByBukola
           </h2>
           <hr className="w-12 border-black mx-auto md:mx-0" />
           <p className="text-black text-base md:text-lg">Make a lasting impression.</p>
           <p className="text-black font-semibold text-base md:text-lg">
-            Shop Women's Occasion
+            Shop Quality Items
           </p>
         </div>
 
