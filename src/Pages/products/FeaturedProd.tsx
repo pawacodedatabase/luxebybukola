@@ -89,7 +89,15 @@ const FeaturedProduct: React.FC = () => {
             </div>
           </div>
         ))}
-      </div>
+
+ <div className="flex justify-center">
+  <Link to="/shop">
+    <button className="bg-black text-yellow-300 p-4">View All Products</button>
+  </Link>
+</div>
+
+
+             </div>
     </div>
   );
 };
